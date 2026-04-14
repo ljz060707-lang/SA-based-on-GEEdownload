@@ -1,0 +1,87 @@
+
+==================================================
+  太阳能板检测评估报告
+  Solar Panel Detection Evaluation Report
+==================================================
+计算 CRS            : EPSG:4490
+导出 CRS            : EPSG:4326
+真值多边形总数     : 28
+预测多边形总数     : 58
+──────────────────────────────────────────────────
+IoU 阈值 = 0.1:
+  TP              : 19.0
+  FP              : 36.0
+  FN              : 9.0
+  Precision       : 0.3455
+  Recall          : 0.6786
+  F1 Score        : 0.4578
+──────────────────────────────────────────────────
+IoU 阈值 = 0.2:
+  TP              : 19.0
+  FP              : 36.0
+  FN              : 9.0
+  Precision       : 0.3455
+  Recall          : 0.6786
+  F1 Score        : 0.4578
+──────────────────────────────────────────────────
+IoU 阈值 = 0.3:
+  TP              : 19.0
+  FP              : 36.0
+  FN              : 9.0
+  Precision       : 0.3455
+  Recall          : 0.6786
+  F1 Score        : 0.4578
+──────────────────────────────────────────────────
+IoU 阈值 = 0.5:
+  TP              : 19.0
+  FP              : 36.0
+  FN              : 9.0
+  Precision       : 0.3455
+  Recall          : 0.6786
+  F1 Score        : 0.4578
+──────────────────────────────────────────────────
+IoU 阈值 = 0.7:
+  TP              : 18.0
+  FP              : 37.0
+  FN              : 10.0
+  Precision       : 0.3273
+  Recall          : 0.6429
+  F1 Score        : 0.4337
+──────────────────────────────────────────────────
+confidence stats (IoU=0.3):
+  mean confidence (TP) : 0.9914
+  mean confidence (FP) : 0.9645
+  std confidence  (TP) : 0.0089
+  std confidence  (FP) : 0.0589
+==================================================
+
+输出文件：
+  - /Users/ljz/PycharmProjects/RA/output/default/G0772/predictions_metric.gpkg
+  - /Users/ljz/PycharmProjects/RA/output/default/G0772/predictions.geojson
+  - /Users/ljz/PycharmProjects/RA/output/default/G0772/confidence_histogram.png
+  - /Users/ljz/PycharmProjects/RA/output/default/G0772/precision_recall_curve.png
+  - /Users/ljz/PycharmProjects/RA/output/default/G0772/iou_threshold_metrics.png
+  - /Users/ljz/PycharmProjects/RA/output/default/G0772/evaluation_per_tile.csv
+
+──────────────────────────────────────────────────
+Installation Profile (V1.3):
+  evaluation_profile : installation
+  label_definition   : installation_footprint
+  note               : V1.3 evaluates reviewed predictions against installation-level GT
+  ── Presence (merge, IoU>=0.1) ──
+    Precision       : 0.3455
+    Recall          : 0.6786
+    F1              : 0.4578
+  ── Footprint Quality ──
+    mean IoU        : 0.8268
+    median IoU      : 0.8502
+    IoU>=0.3 rate   : 100.0%
+    IoU>=0.5 rate   : 100.0%
+    mean Dice       : 0.9037
+  ── Area Error (by size class) ──
+          <5m2: n= 19  abs=+0.0m²  rel=+14.0%
+  ── Installation Metric Files ──
+    - /Users/ljz/PycharmProjects/RA/output/default/G0772/presence_metrics.csv
+    - /Users/ljz/PycharmProjects/RA/output/default/G0772/footprint_metrics.csv
+    - /Users/ljz/PycharmProjects/RA/output/default/G0772/area_error_metrics.csv
+==================================================

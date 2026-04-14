@@ -1,0 +1,57 @@
+# Dataset Registry — Regions & Grids
+# 区域 → grids → 标注源 → 质量等级 → 基线指标
+
+regions:
+  cape_town:
+    description: "Cape Town rooftop solar installations"
+    crs_metric: "EPSG:32734"
+    crs_exchange: "EPSG:4326"
+
+    grids:
+      G1238:
+        annotation_source: "data/annotations/G1238_SAM2_260320.gpkg"
+        annotation_layer: "SAM_Residential_merged"
+        annotation_count: 248
+        quality_tier: "T1"
+        notes: "SAM2.1 (GeoSAM/QGIS) detailed segmentation"
+        baseline_metrics:
+          stock_f1: 0.64
+          finetuned_f1_iou03: 0.7789
+          presence_recall_iou01: 0.9268
+
+      G1189:
+        annotation_source: "data/annotations/G1189_SAM2_260320.gpkg"
+        annotation_layer: "sam_residential_g1189_mosa_109_rgb255105180"
+        annotation_count: 109
+        quality_tier: "T1"
+        notes: "SAM2.1 (GeoSAM/QGIS) detailed segmentation"
+        baseline_metrics:
+          stock_recall: 0.33
+          finetuned_f1_iou03: 0.5950
+          presence_recall_iou01: 0.7241
+
+      G1190:
+        annotation_source: "data/annotations/G1190_SAM2_260320.gpkg"
+        annotation_layer: "SAM_Residential_20260320_221905"
+        annotation_count: 99
+        quality_tier: "T1"
+        notes: "SAM2.1 (GeoSAM/QGIS) detailed segmentation"
+        baseline_metrics:
+          stock_recall: 0.39
+          finetuned_f1_iou03: 0.6490
+          presence_recall_iou01: 0.7500
+
+  johannesburg:
+    description: "Johannesburg cross-city transfer test"
+    crs_metric: "EPSG:32735"
+    crs_exchange: "EPSG:4326"
+
+    grids:
+      JHB01: { annotation_count: 0, notes: "Transfer test only" }
+      JHB02: { annotation_count: 0, notes: "Transfer test only" }
+      JHB03: { annotation_count: 0, notes: "Transfer test only" }
+      JHB04: { annotation_count: 0, notes: "Transfer test only" }
+      JHB05: { annotation_count: 0, notes: "Transfer test only" }
+      JHB06: { annotation_count: 0, notes: "Transfer test only" }
+    baseline_metrics:
+      macro_recall: 0.281

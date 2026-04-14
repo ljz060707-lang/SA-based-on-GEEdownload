@@ -1,0 +1,37 @@
+{
+  "artifacts": {
+    "predictions_export": "predictions.geojson",
+    "predictions_metric": "predictions_metric.gpkg"
+  },
+  "config": {
+    "batch_size": 4,
+    "chip_size": [
+      400,
+      400
+    ],
+    "confidence_threshold": 0.3,
+    "export_crs": "EPSG:4326",
+    "grid_id": "G0772",
+    "input_crs": "EPSG:4326",
+    "mask_threshold": 0.3,
+    "max_elongation": 8.0,
+    "metric_crs": "EPSG:4490",
+    "min_object_area": 5,
+    "min_solidity": 0.0,
+    "model_path": null,
+    "output_dir": "/Users/ljz/PycharmProjects/RA/output/default/G0772",
+    "overlap": 0.25,
+    "post_conf_threshold": 0.85,
+    "script_sha256": "bb10d028cc040fe35b3530e774c2325e552f52f7ca88e67d8785efcdc42ab7b5",
+    "shadow_rgb_thresh": 60,
+    "tiles_dir": "/Users/ljz/PycharmProjects/RA/input/G0772/tiles"
+  },
+  "created_at_utc": "2026-04-14T09:54:28.973448+00:00",
+  "evaluation_config": {
+    "annotation_tier_mix": "T1+T2",
+    "data_scope": "full_grid",
+    "evaluation_profile": "installation",
+    "label_definition": "installation_footprint"
+  },
+  "result_count": 58
+}

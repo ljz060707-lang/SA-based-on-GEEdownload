@@ -1,0 +1,15 @@
+geoai-py
+geopandas
+shapely
+scikit-learn
+matplotlib
+seaborn
+rasterio
+rasterstats
+osmnx
+requests
+torch
+torchvision
+huggingface_hub
+opencv-python-headless
+pycocotools
